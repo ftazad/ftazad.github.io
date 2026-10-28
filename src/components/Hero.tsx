@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GraduationCap, FileText, Github, Linkedin, Mail } from 'lucide-react';
+import { GraduationCap, FileText, Github, Linkedin, Mail, BookOpen } from 'lucide-react';
 import { profileData } from '../data/loadContent';
 
 export default function Hero() {
@@ -35,6 +35,17 @@ export default function Hero() {
               <a className="chip" href={links.scholar} target="_blank" rel="noopener noreferrer">
                 <GraduationCap size={16} /> Scholar
               </a>
+              {links.researchgate && (
+                <a className="chip" href={links.researchgate} target="_blank" rel="noopener noreferrer">
+                  <BookOpen size={16} /> ResearchGate
+                </a>
+              )}
+              {links.dblp && (
+                <a className="chip" href={links.dblp} target="_blank" rel="noopener noreferrer">DBLP</a>
+              )}
+              {links.orcid && (
+                <a className="chip" href={links.orcid} target="_blank" rel="noopener noreferrer">ORCID</a>
+              )}
               <a className="chip" href={links.github} target="_blank" rel="noopener noreferrer">
                 <Github size={16} /> GitHub
               </a>
@@ -45,10 +56,6 @@ export default function Hero() {
           </div>
 
           <div className="hero-cards">
-            <a className="market-card" href={jobMarket.url}>
-              <strong>{jobMarket.title}</strong>
-              <span>{jobMarket.text}</span>
-            </a>
             {photoOk ? (
               <img
                 className="headshot"
@@ -59,6 +66,10 @@ export default function Hero() {
             ) : (
               <div className="headshot headshot-fallback" aria-hidden="true">{initials}</div>
             )}
+            <a className="market-card" href={jobMarket.url}>
+              <strong>{jobMarket.title}</strong>
+              <span>{jobMarket.text}</span>
+            </a>
           </div>
         </div>
 
