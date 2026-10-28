@@ -1,41 +1,39 @@
 # ftazad.com
 
-Personal academic website for Fahim Tasneema Azad. Plain HTML and CSS, with no build step.
+Personal academic website for Fahim Tasneema Azad. Plain HTML, CSS and one small script, with no build step. Hosted on GitHub Pages.
 
 ## Files
 
-- `index.html`: all page content. Edit this to add news, papers, etc.
-- `style.css`: colors, fonts, layout. Colors are defined at the top.
-- `headshot.jpg`: **add this** (square photo, at least 400×400). Until it exists, the page shows "FTA" initials.
-- `cv.pdf`: **add this** (export your LaTeX CV to PDF and name it `cv.pdf`).
+| File | What it is |
+|---|---|
+| `index.html` | Home: name, roles, links, photo, headline numbers, bio, future lab, awards, funding, contact |
+| `research.html` | Research overview, four thrusts, future directions, projects, invited talks |
+| `publications.html` | All publications, grouped by type |
+| `teaching.html` | Teaching, appointments, service, mentoring, honor societies, press |
+| `style.css` | Colors, fonts and layout for every page. Colors are at the top. |
+| `site.js` | The light/dark mode button |
+| `headshot.jpg` | **You add this.** A portrait photo (roughly 4:5, at least 600 px wide). Until it exists, "FTA" shows instead. |
+| `cv.pdf` | **You add this.** Your CV as a PDF. |
 
-## Publish on GitHub Pages
+## Replacing the old version on GitHub
 
-1. On GitHub, create a repository named **`ftazad.github.io`** (exactly your username + `.github.io`).
-2. Upload `index.html`, `style.css`, `headshot.jpg`, and `cv.pdf` to the repository root (Add file → Upload files → Commit).
-3. Go to **Settings → Pages**. Under "Build and deployment", set Source to **Deploy from a branch**, branch **main**, folder **/ (root)**, and save.
-4. After a minute or two, the site is live at `https://ftazad.github.io`.
+1. Open your `ftazad.github.io` repository on github.com.
+2. Click **Add file** → **Upload files** and drag in all the files above. Files with the same name are replaced.
+3. Click **Commit changes**. The site updates in a minute or two.
 
-## Connect ftazad.com (after you buy the domain)
+Don't delete the `CNAME` file in the repository; it keeps ftazad.com connected.
 
-1. In the repository, go to **Settings → Pages → Custom domain**, enter `ftazad.com`, and save. GitHub adds a `CNAME` file for you.
-2. At your domain registrar's DNS settings, add:
-   - Four **A** records for `@` pointing to:
-     `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - One **CNAME** record for `www` pointing to `ftazad.github.io`
-3. DNS can take up to a day. Once GitHub shows the domain as verified, tick **Enforce HTTPS**.
+## Editing
 
-Check GitHub's current docs ("Managing a custom domain for your GitHub Pages site") in case the IP addresses change.
+Open any `.html` file on GitHub, click the pencil icon, edit, and click **Commit changes**.
 
-If you also register ftazad.net, .org, or .ai, use the registrar's "URL forwarding" to redirect them to `https://ftazad.com`.
+- **Add an award, grant or service item:** copy one `<li>...</li>` line in that list and change the text. `<li class="highlight">` gives it the gold highlight. Add `<span class="badge-new">NEW</span>` before `</li>` to show a NEW badge.
+- **Add a publication:** in `publications.html`, copy one `<li>...</li>` in the right list and edit it.
+- **Change the headline numbers:** search `index.html` for `class="stats"`.
+- **After the job market:** in `index.html`, change or delete the `market-card` link next to the photo and the "Future research lab" box.
 
-## Updating
+The navigation bar and footer are repeated at the top and bottom of each page, so a change there (for example, adding a page) needs to be made in all four files.
 
-- **News:** copy one `<li>` inside `<section id="news">` and edit it. Keep the newest at the top.
-- **Papers:** copy a `<li>` in the right list under `<section id="publications">`. To add a link, put `<span class="pub-links"><a href="...">PDF</a></span>` at the end, as in the arXiv entry.
-- After the job market, change or delete the `<p class="market">` line in the sidebar.
+## Connecting ftazad.com
 
-## Notes
-
-- Your phone number is intentionally left off the public site.
-- Search engines read the `<meta name="description">` at the top of `index.html`; update it if your title changes.
+See the steps in our conversation: four A records for `@` (185.199.108.153, .109.153, .110.153, .111.153) and a CNAME for `www` pointing to `ftazad.github.io`, with Squarespace Defaults removed. Then set the custom domain under Settings → Pages and tick Enforce HTTPS.
