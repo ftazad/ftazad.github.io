@@ -1,0 +1,28 @@
+# Fahim Tasneema Azad
+
+> Ph.D. candidate in Computer Science at Arizona State University (School of Computing and Augmented Intelligence, EMIT Lab; advisor Prof. K. Selçuk Candan). Develops scalable, causally-informed machine learning for large-scale, heterogeneous multivariate time series under regime shift and data sparsity, validated on public health and sustainability data. On the 2026–27 academic job market for tenure-track faculty positions.
+
+## Research topics
+- Causally-informed representation learning: asymmetric factorization machines with directed, lagged causal structure (masking and Frobenius-norm regularization)
+- Domain disentanglement for knowledge transfer from data-rich to data-poor settings (epidemic onset forecasting)
+- Spatio-causal situation awareness, forecasting, and planning; spatially-informed mechanistic epidemic models (SIRTEM)
+- Simulation ensembles for counterfactual reasoning in coupled dynamic systems (PanCommunity, DataStorm-EM)
+- Future directions: causal discovery under sparsity with LLM-based agents; time series foundation models pretrained on simulation ensembles; benchmarks for causally-constrained streaming forecasting
+
+## Selected publications
+- A Vision for Spatio-Causal Situation Awareness, Forecasting, and Planning. ACM TSAS, 2024.
+- SIRTEM: Spatially Informed Rapid Testing for Epidemic Modeling and Response. ACM TSAS, 2022.
+- A New Paradigm for Pandemic Preparedness. Current Epidemiology Reports, 2023.
+- Spatio-Causal Modeling and Applications (tutorial). ACM SIGSPATIAL, 2026.
+
+## Background
+- Former Assistant Professor, United International University, Bangladesh (2015–2018); Lecturer, State University of Bangladesh (2010–2012)
+- M.S. Computer Science, Arizona State University; M.B.A. Finance, IBA, University of Dhaka; B.IT. Software Engineering, Multimedia University
+
+## Links
+- Website: https://ftazad.com
+- Publications: https://ftazad.com/publications.html
+- Google Scholar: https://scholar.google.com/citations?user=iIECunIAAAAJ
+- GitHub: https://github.com/ftazad
+- LinkedIn: https://linkedin.com/in/fahimtasneemaazad16
+- Email: fazad@asu.edu

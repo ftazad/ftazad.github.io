@@ -1,0 +1,69 @@
+{
+  "name": "Fahim Tasneema Azad",
+  "credential": "M.S. · M.B.A.",
+  "roles": [
+    {
+      "role": "Ph.D. Candidate, Computer Science",
+      "org": "School of Computing and Augmented Intelligence, Arizona State University",
+      "url": "https://scai.engineering.asu.edu/"
+    },
+    {
+      "role": "Graduate Research Assistant",
+      "org": "EMIT Lab, Arizona State University (Advisor: Prof. K. Selçuk Candan)",
+      "url": ""
+    },
+    {
+      "role": "Summer Research Intern, 2026",
+      "org": "NSF Analysis and Predictions of Pandemic Expansion (APPEX) Center",
+      "url": ""
+    }
+  ],
+  "email": "fazad@asu.edu",
+  "office": "School of Computing and Augmented Intelligence, Arizona State University, Tempe, AZ",
+  "headshot": "/headshot.jpeg",
+  "initials": "FTA",
+  "cv": "/cv.pdf",
+  "siteUrl": "https://ftazad.com",
+  "links": {
+    "scholar": "https://scholar.google.com/citations?user=iIECunIAAAAJ",
+    "github": "https://github.com/ftazad",
+    "linkedin": "https://linkedin.com/in/fahimtasneemaazad16"
+  },
+  "jobMarket": {
+    "title": "On the 2026–27 job market",
+    "text": "Seeking tenure-track faculty positions.",
+    "url": "/cv.pdf"
+  },
+  "stats": [
+    {
+      "value": "12+",
+      "label": "Years of data-centric research and practice"
+    },
+    {
+      "value": "5+",
+      "label": "Years as university faculty"
+    },
+    {
+      "value": "350",
+      "label": "Graduate students taught as instructor of record"
+    },
+    {
+      "value": "~100",
+      "label": "Ph.D. students matched in a mentorship program I organized"
+    }
+  ],
+  "bio": [
+    "Fahim Tasneema Azad is a Ph.D. candidate in Computer Science in the School of Computing and Augmented Intelligence (SCAI) at Arizona State University, advised by Prof. K. Selçuk Candan in the EMIT Lab. Her research lies at the intersection of artificial intelligence, data systems, and causality. She develops scalable, causally-informed machine learning methods for large-scale, heterogeneous multivariate time series that are high-dimensional, noisy, sparse, and subject to regime shift. Her work spans causally-regularized factorization machines, domain disentanglement for knowledge transfer from data-rich to data-poor settings, spatio-causal forecasting with mechanistic priors, and simulation ensembles for counterfactual reasoning, validated on real-world data from public health and sustainability. Her research has appeared in ACM Transactions on Spatial Algorithms and Systems and IEEE BigData, she contributed to the funded NSF proposal PanAX, and she will present a tutorial on spatio-causal modeling at ACM SIGSPATIAL 2026.",
+    "Before her Ph.D., Azad spent more than five years as a university faculty member in Bangladesh, most recently as an Assistant Professor at United International University, where she secured a university research grant as principal investigator and led the faculty team preparing ACBSP accreditation. She holds an M.S. in Computer Science from Arizona State University, an M.B.A. in Finance from the Institute of Business Administration, University of Dhaka, and a B.IT. in Software Engineering from Multimedia University, Malaysia.",
+    "Azad is committed to building community in computing. As President of Upsilon Pi Epsilon at ASU, she organized a SCAI-wide mentorship program open to about 450 Ph.D. students, and as VP External Affairs of Women in Computer Science she ran a programming competition and led Grace Hopper Celebration trip selection. She has received ASU's Outstanding Mentorship Award from the Graduate Student Government (2025, 2026), the Outstanding Graduate Student Leader Award at the 2024 Pitchfork Awards, and the Fulton Schools Impact Award."
+  ],
+  "futureLab": {
+    "eyebrow": "Future research lab",
+    "heading": "Causal intelligence for complex dynamic systems",
+    "text": "I will establish a research lab at the intersection of AI, data systems, and causality, focused on forecasting when data are sparse and dynamics are changing. The five-year agenda covers causal discovery under sparsity with LLM-based agents, time series foundation models pretrained on simulation ensembles, and open systems and benchmarks for causally-constrained streaming forecasting, with applications in public health, sustainability, and critical infrastructure. I am on the 2026–27 academic job market and welcome conversations with search committees and prospective collaborators.",
+    "ctaLabel": "See my publications",
+    "ctaUrl": "/publications.html"
+  },
+  "contactNote": "Search committees: I am glad to share my research, teaching, and other application materials on request.",
+  "researchNotice": "A full overview of my research thrusts, projects, and future agenda is coming soon. In brief: I develop causally-informed machine learning methods for forecasting in complex dynamic systems under data sparsity and regime shift, validated on real-world data such as public health and sustainability. In the meantime, my publications and CV cover my work in detail."
+}
