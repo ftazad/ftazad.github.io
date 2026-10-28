@@ -101,7 +101,14 @@ export interface Profile {
   initials: string;
   cv: string;
   siteUrl: string;
-  links: { scholar: string; github: string; linkedin: string };
+  links: {
+    scholar: string;
+    researchgate?: string;
+    dblp?: string;
+    orcid?: string;
+    github: string;
+    linkedin: string;
+  };
   jobMarket: { title: string; text: string; url: string };
   stats: { label: string; value: string }[];
   bio: string[];
