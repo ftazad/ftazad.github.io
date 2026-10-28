@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fahim Tasneema Azad — Causal ML for Spatio-Temporal Forecasting (ASU)</title>
+  <meta name="author" content="Fahim Tasneema Azad">
+  <meta name="description" content="Fahim Tasneema Azad is a Ph.D. candidate in Computer Science at Arizona State University. Her research develops causally-informed machine learning for large-scale multivariate time series under regime shift and data scarcity, with applications in public health and sustainability.">
+  <meta name="keywords" content="Fahim Tasneema Azad, causal machine learning, multivariate time series forecasting, spatio-causal, regime shift, data scarcity, factorization machines, domain disentanglement, transfer learning, epidemic forecasting, simulation ensembles, Arizona State University, EMIT Lab">
+  <link rel="canonical" href="https://ftazad.com/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Fahim Tasneema Azad — Causal ML for Spatio-Temporal Forecasting">
+  <meta property="og:description" content="Causally-informed machine learning for multivariate time series under regime shift and data scarcity.">
+  <meta property="og:url" content="https://ftazad.com/">
+  <meta property="og:image" content="https://ftazad.com/headshot.jpg">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231f6a8a'/%3E%3Ctext x='16' y='21' font-family='Arial' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3EFTA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fahim Tasneema Azad",
+    "url": "https://ftazad.com/",
+    "jobTitle": "Ph.D. Candidate, Computer Science",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Arizona State University" },
+    "email": "mailto:fazad@asu.edu",
+    "sameAs": [
+      "https://github.com/ftazad",
+      "https://scholar.google.com/citations?user=iIECunIAAAAJ",
+      "https://linkedin.com/in/fahimtasneemaazad16"
+    ],
+    "knowsAbout": ["Causal machine learning", "Multivariate time series forecasting", "Spatio-temporal data", "Epidemic forecasting"]
+  }
+  </script>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <!-- Add a square photo named headshot.jpg next to this file. Until then, initials show instead. -->
+      <img class="portrait" src="headshot.jpg" alt="Portrait of Fahim Tasneema Azad"
+           onerror="this.hidden=true; document.getElementById('portrait-fallback').hidden=false;">
+      <div id="portrait-fallback" class="portrait portrait-fallback" hidden aria-hidden="true">FTA</div>
+      <div>
+        <h1>Fahim Tasneema Azad</h1>
+        <p class="role">Ph.D. Candidate, Computer Science<br>Arizona State University</p>
+      </div>
+    </div>
+
+    <p class="market">On the 2026–27 academic job market for tenure-track faculty positions.</p>
+
+    <ul class="links">
+      <li><a href="mailto:fazad@asu.edu">fazad@asu.edu</a></li>
+      <li><a href="cv.pdf">CV (PDF)</a></li>
+      <li><a href="https://scholar.google.com/citations?user=iIECunIAAAAJ">Google Scholar</a></li>
+      <li><a href="https://github.com/ftazad">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/fahimtasneemaazad16">LinkedIn</a></li>
+    </ul>
+
+    <nav class="nav" aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#teaching">Teaching &amp; experience</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#awards">Awards</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <section id="about" class="hero">
+      <figure class="hero-figure">
+        <svg viewBox="0 0 780 220" role="img" aria-labelledby="fig-title">
+          <title id="fig-title">Three time series with directed, lagged causal links that change after a regime shift</title>
+          <line class="regime" x1="470" y1="12" x2="470" y2="208"/>
+          <text class="regime-label" x="476" y="22">regime shift</text>
+
+          <g>
+            <path class="series" d="M20,55 C60,40 100,62 140,48 S220,38 260,52 S340,66 380,50 S460,40 500,30 S580,20 620,34 S680,44 700,40"/>
+            <path class="series" d="M20,112 C70,118 110,100 150,108 S230,124 270,110 S350,96 390,104 S470,120 510,96 S590,90 630,100 S690,108 700,104"/>
+            <path class="series target" d="M20,178 C80,180 120,176 170,170 S250,162 300,150 S380,166 420,160 S480,150 520,130 S600,170 640,176 S690,160 700,158"/>
+          </g>
+          <text class="series-label" x="710" y="44">mobility</text>
+          <text class="series-label" x="710" y="108">testing</text>
+          <text class="series-label target" x="710" y="162">cases</text>
+
+          <g>
+            <path class="edge" d="M140,48 C165,95 195,130 232,166"/>
+            <path class="edge" d="M270,110 C292,128 312,142 336,155"/>
+            <path class="edge" d="M390,104 C405,125 418,145 428,159"/>
+            <path class="edge" d="M510,96 C528,105 540,115 552,138"/>
+          </g>
+          <g>
+            <circle class="node" cx="140" cy="48" r="4"/>
+            <circle class="node" cx="270" cy="110" r="4"/>
+            <circle class="node" cx="390" cy="104" r="4"/>
+            <circle class="node" cx="510" cy="96" r="4"/>
+            <circle class="edge-head" cx="232" cy="166" r="3.5"/>
+            <circle class="edge-head" cx="336" cy="155" r="3.5"/>
+            <circle class="edge-head" cx="428" cy="159" r="3.5"/>
+            <circle class="edge-head" cx="552" cy="138" r="3.5"/>
+          </g>
+        </svg>
+        <figcaption>Directed, lagged dependencies between series (amber) are the structure my methods learn, and the structure they need to keep when the data-generating regime changes.</figcaption>
+      </figure>
+
+      <p class="lede">I build machine learning methods that forecast complex dynamic systems when data are scarce and the rules keep changing.</p>
+      <p>I am a Ph.D. candidate in Computer Science at Arizona State University, advised by <a href="https://scholar.google.com/scholar?q=K.+Sel%C3%A7uk+Candan">Prof. K. Selçuk Candan</a> in the EMIT Lab. My research sits at the intersection of artificial intelligence, data systems, and causality: causally-informed learning for large-scale, heterogeneous multivariate time series that are high-dimensional, noisy, sparse, and subject to regime shift.</p>
+      <p>The problem became concrete for me in May 2020, building SIRTEM against live COVID-19 data. Counts arrived late, were revised without notice, and aggregated away the regional structure that drives transmission. No amount of model capacity fixes that. What was missing was a way to reason about what the data did not resolve, especially at onset, when forecasts matter most and evidence is thinnest.</p>
+      <p>Before my Ph.D., I spent several years as a faculty member in Bangladesh, most recently as an Assistant Professor at United International University, and I hold an M.B.A. in Finance. I collaborate closely with experts in public health, sustainability, and enterprise systems.</p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <ul class="thrusts">
+        <li class="thrust">
+          <h3>Causally-informed representation learning</h3>
+          <p>A standard factorization machine's interaction term is symmetric, so it cannot represent the direction of a causal edge. I generalize it to an asymmetric low-rank factorization <i>VU</i><sup>⊤</sup> and inject directed, lagged causal structure through interaction masking and Frobenius-norm regularization, and characterize how graph density and directional asymmetry govern when this helps.</p>
+          <p class="refs">Ongoing work; FMAM and FM-enhanced Crossformer at WiML (NeurIPS 2022, 2025)</p>
+        </li>
+        <li class="thrust">
+          <h3>Knowledge transfer from data-rich to data-poor settings</h3>
+          <p>A domain disentanglement framework separates location-invariant causal features from location-specific confounders, so shared structure transfers to regions with little data without requiring target supervision. Validated on epidemic onset forecasting across communities.</p>
+          <p class="refs">Epidemics10, 2025</p>
+        </li>
+        <li class="thrust">
+          <h3>Spatio-causal forecasting and mechanistic models</h3>
+          <p>Forecasts that ignore geography fail worst at onset. I formalize spatio-causal situation awareness and extend compartmental epidemic models with inter- and intra-region mobility, showing that spatially homogeneous models underestimate severity across connected regions.</p>
+          <p class="refs">ACM TSAS 2024; SIRTEM, ACM TSAS 2022</p>
+        </li>
+        <li class="thrust">
+          <h3>Counterfactual reasoning with simulation ensembles</h3>
+          <p>PanCommunity and DataStorm-EM move from prediction to intervention: coupling four simulators so policymakers can compare the trajectories that follow from competing response strategies, with interventions propagating across systems rather than evaluated in isolation.</p>
+          <p class="refs">arXiv:2407.14571; Epidemics9, 2023</p>
+        </li>
+      </ul>
+
+      <h3>Looking ahead</h3>
+      <p>Next, I am working on causal discovery under scarcity, using LLM-based agents that propose mechanisms from published literature and refine them against statistical discovery on observed streams; time series foundation models pretrained on simulation ensembles so that mechanistic knowledge enters through the pretraining distribution itself; and open systems and benchmarks for causally-constrained streaming forecasting evaluated under distribution shift.</p>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <p>Full list on <a href="https://scholar.google.com/citations?user=iIECunIAAAAJ">Google Scholar</a>.</p>
+
+      <h3>Journal and conference articles</h3>
+      <ol class="pubs">
+        <li><span class="pub-id">J1</span><div><span class="me">Fahim Tasneema Azad</span>, K. Selçuk Candan, Ahmet Kapkiç, Mao-Lin Li, Huan Liu, Pratanu Mandal, Paras Seth, Bilgehan Arslan, Gerardo Chowell-Puente, John Sabo, Rebecca Muenich, Javier Redondo, Maria Luisa Sapino. <span class="pub-title">A Vision for Spatio-Causal Situation Awareness, Forecasting, and Planning.</span> <span class="venue">ACM Transactions on Spatial Algorithms and Systems (TSAS)</span>, 2024.</div></li>
+        <li><span class="pub-id">J2</span><div>Nina H. Fefferman, John S. McAlister, Belinda S. Akpa, Kelechi Akwataghibe, <span class="me">Fahim Tasneema Azad</span>, K. Selçuk Candan, Gerardo Chowell-Puente, et al. <span class="pub-title">A New Paradigm for Pandemic Preparedness.</span> <span class="venue">Current Epidemiology Reports</span>, Springer, 2023.</div></li>
+        <li><span class="pub-id">J3</span><div><span class="me">Fahim Tasneema Azad</span>, Robert W. Dodge, Allen M. Varghese, Jaejin Lee, Giulia Pedrielli, K. Selçuk Candan, Gerardo Chowell-Puente. <span class="pub-title">SIRTEM: Spatially Informed Rapid Testing for Epidemic Modeling and Response.</span> <span class="venue">ACM Transactions on Spatial Algorithms and Systems (TSAS)</span>, 2022.</div></li>
+        <li><span class="pub-id">C1</span><div>Yoonhyuk Choi, <span class="me">Fahim Tasneema Azad</span>. <span class="pub-title">Improving the Text Convolution Mechanism with Large Language Models for Review-Based Recommendation.</span> <span class="venue">IEEE International Conference on Big Data</span>, 2024.</div></li>
+      </ol>
+
+      <h3>Tutorials</h3>
+      <ol class="pubs">
+        <li><span class="pub-id">TU1</span><div><span class="me">Fahim Tasneema Azad</span>, Ahmet Kapkiç, Pratanu Mandal, Abhinav Gorantla, Shu Wan, Maria Luisa Sapino, Huan Liu, K. Selçuk Candan. <span class="pub-title">Spatio-Causal Modeling and Applications.</span> <span class="venue">ACM SIGSPATIAL</span>, 2026. To appear.</div></li>
+      </ol>
+
+      <h3>Workshop papers and posters</h3>
+      <ol class="pubs">
+        <li><span class="pub-id">W1</span><div><span class="me">Fahim Tasneema Azad</span>. <span class="pub-title">Factorization-Machine-Enhanced Crossformer for Multivariate Time Series Event Detection.</span> <span class="venue">Women in Machine Learning Workshop at NeurIPS</span>, 2025.</div></li>
+        <li><span class="pub-id">W2</span><div><span class="me">Fahim Tasneema Azad</span>, K. Selçuk Candan. <span class="pub-title">FMAM: A Factorization-Machine-Based Attention Mechanism for Time Series Forecasting.</span> <span class="venue">Women in Machine Learning Workshop at NeurIPS</span>, 2022.</div></li>
+        <li><span class="pub-id">P1</span><div><span class="me">Fahim Tasneema Azad</span>, K. Selçuk Candan, Gerardo Chowell-Puente. <span class="pub-title">Domain Disentanglement for Epidemic Onset Forecasting: Knowledge Transfer from Data-Rich to Data-Poor Communities.</span> <span class="venue">Epidemics10</span>, 2025.</div></li>
+        <li><span class="pub-id">P2</span><div><span class="me">Fahim Tasneema Azad</span>, Javier Redondo Anton, Shubhodeep Mitra, Fateh Singh, Hans Walter Behrens, Mao-Lin Li, Bilgehan Arslan, K. Selçuk Candan, Maria Luisa Sapino, Gerardo Chowell-Puente, Giulia Pedrielli. <span class="pub-title">PanCommunity: Non-Monolithic Complex Epidemic and Pandemic Modeling.</span> <span class="venue">Epidemics9</span>, 2023.</div></li>
+        <li><span class="pub-id">P3</span><div><span class="me">Fahim Tasneema Azad</span>, Robert W. Dodge, Allen M. Varghese, Jaejin Lee, Giulia Pedrielli, K. Selçuk Candan, Gerardo Chowell-Puente. <span class="pub-title">SIRTEM: Spatially Informed Rapid Testing for Epidemic Modeling and Response to COVID-19.</span> <span class="venue">Epidemics9</span>, 2023.</div></li>
+      </ol>
+
+      <h3>White papers</h3>
+      <ol class="pubs">
+        <li><span class="pub-id">WP1</span><div><span class="me">Fahim Tasneema Azad</span>, Javier Redondo Anton, Shubhodeep Mitra, Fateh Singh, Hans Behrens, Mao-Lin Li, Bilgehan Arslan, K. Selçuk Candan, Maria Luisa Sapino. <span class="pub-title">DataStorm-EM: Exploration of Alternative Timelines within Continuous-Coupled Simulation Ensembles.</span> <span class="venue">arXiv:2407.14571</span>, 2024. <span class="pub-links"><a href="https://arxiv.org/abs/2407.14571">arXiv</a></span></div></li>
+      </ol>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <ul class="dated">
+        <li><span class="when">Fall 2026</span><span>I am on the academic job market for tenure-track faculty positions.</span></li>
+        <li><span class="when">2026</span><span>Tutorial on spatio-causal modeling and applications accepted at ACM SIGSPATIAL 2026.</span></li>
+        <li><span class="when">Summer 2026</span><span>Research intern at the NSF APPEX Center, building an agentic AI framework for causal discovery from published literature.</span></li>
+        <li><span class="when">Spring 2026</span><span>Received the ASU Graduate Student Government Outstanding Mentorship Award for the second year.</span></li>
+        <li><span class="when">2026</span><span>Serving on the program committees of IEEE BigData, ACM Multimedia, and UniReps at NeurIPS.</span></li>
+        <li><span class="when">Fall 2025</span><span>Instructor of record for CSE 579, Knowledge Representation and Reasoning, with 350 graduate students.</span></li>
+        <li><span class="when">2025</span><span>FM-enhanced Crossformer for time series event detection presented at WiML at NeurIPS 2025.</span></li>
+        <li><span class="when">2025</span><span>NSF proposal PanAX, which I contributed to with my advisor, was funded.</span></li>
+        <li><span class="when">2025</span><span>Domain disentanglement for epidemic onset forecasting presented at Epidemics10.</span></li>
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching &amp; experience</h2>
+      <h3>Faculty appointments</h3>
+      <ul class="dated">
+        <li><span class="when">2015–2018</span><span><strong>Assistant Professor</strong> (2016–2018), Senior Lecturer, and Lecturer, United International University, Dhaka. Sole instructor for Database Management Systems, Programming Languages, and E-Commerce; principal investigator on a university research grant; led the faculty team preparing ACBSP accreditation.</span></li>
+        <li><span class="when">2010–2012</span><span><strong>Lecturer</strong>, State University of Bangladesh, Dhaka. Sole instructor for Data Structures, Discrete Mathematics, and Digital Logic Design.</span></li>
+      </ul>
+      <h3>Arizona State University</h3>
+      <ul class="dated">
+        <li><span class="when">Fall 2025</span><span><strong>Instructor of record</strong>, CSE 579 Knowledge Representation and Reasoning (graduate, 350 students).</span></li>
+        <li><span class="when">Fall 2025</span><span>Teaching assistant, CSE 515 Multimedia and Web Databases (graduate).</span></li>
+        <li><span class="when">2019–2020</span><span>Teaching assistant, CSE 240, CSE 110, CSE 460, and CSE 205 (undergraduate, up to 120 students).</span></li>
+      </ul>
+      <h3>Research appointments</h3>
+      <ul class="dated">
+        <li><span class="when">2019–present</span><span>Graduate Research Assistant, EMIT Lab, Arizona State University.</span></li>
+        <li><span class="when">Summer 2026</span><span>Summer Research Intern, NSF Analysis and Predictions of Pandemic Expansion (APPEX) Center.</span></li>
+      </ul>
+    </section>
+
+    <section id="service">
+      <h2>Service</h2>
+      <h3>Program committees</h3>
+      <p>IEEE BigData 2026; ACM Multimedia 2026; UniReps at NeurIPS 2026; Trustworthy Agentic Systems, AAAI Fall Symposium 2026.</p>
+      <h3>Reviewing</h3>
+      <p>Conferences and workshops: KDD (2022, 2026), CIKM 2024, DSAA 2026, ACM Multimedia 2025, WiML at NeurIPS (2025, 2026), NeurIPS FMTS 2026, ICLR TSALM 2026, AAAI Undergraduate Consortium 2027.<br>
+      Journals: ACM Computing Surveys, IEEE TKDE, IEEE TKDD, IEEE MultiMedia, ACM AI Letters.</p>
+      <h3>Mentoring and outreach</h3>
+      <ul class="inline-list">
+        <li>President, Upsilon Pi Epsilon at ASU: built a school-wide Ph.D. mentorship program open to about 450 students, matching about 100 mentors and mentees.</li>
+        <li>VP External Affairs, Women in Computer Science at ASU: ran a programming competition for about 100 students and led Grace Hopper Celebration trip selection.</li>
+        <li>Mentor, ASU DataFest (2023, 2024); volunteer with WiML, SWE, WSDM, and SIGMOD.</li>
+      </ul>
+    </section>
+
+    <section id="awards">
+      <h2>Selected awards</h2>
+      <ul class="dated">
+        <li><span class="when">2025, 2026</span><span>Outstanding Mentorship Award, ASU Graduate Student Government</span></li>
+        <li><span class="when">2025</span><span>Engineering Graduate Fellowship, Ira A. Fulton Schools of Engineering</span></li>
+        <li><span class="when">2024–2025</span><span>Harold &amp; Lucille Dunn Memorial Engineering Scholarship</span></li>
+        <li><span class="when">2024</span><span>SCAI Doctoral Fellowship, ASU</span></li>
+        <li><span class="when">2024</span><span>Outstanding Graduate Student Leader, ASU Pitchfork Awards (<a href="https://studentlife.asu.edu/content/dressed-forks-2024-pitchfork-awards">story</a>)</span></li>
+        <li><span class="when">2023–2024</span><span>SCAI Outstanding CS M.S. Thesis Award</span></li>
+        <li><span class="when">2023</span><span>ASU Fulton Schools Impact Award (<a href="https://news.engineering.asu.edu/graduate/fahim-tasneema-azad/">profile</a>)</span></li>
+        <li><span class="when">2022–2025</span><span>Travel awards from NeurIPS/WiML, AnitaB.org GHC, CRA-WP Grad Cohort, and SWE</span></li>
+      </ul>
+      <p>Member of Tau Beta Pi, Sigma Xi, Upsilon Pi Epsilon, and IEEE-Eta Kappa Nu.</p>
+    </section>
+
+    <footer>
+      <p>© 2026 Fahim Tasneema Azad. Last updated October 2026.</p>
+    </footer>
+  </main>
+</div>
+
+<script>
+  // Highlight the current section in the sidebar nav.
+  (function () {
+    var links = document.querySelectorAll('.nav a');
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    if (!('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (s) { obs.observe(s); });
+  })();
+</script>
+</body>
+</html>
