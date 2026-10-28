@@ -23,6 +23,8 @@
 - Website: https://ftazad.com
 - Publications: https://ftazad.com/publications.html
 - Google Scholar: https://scholar.google.com/citations?user=iIECunIAAAAJ
+- ORCID: https://orcid.org/0000-0001-5225-9602
+- DBLP: https://dblp.org/pid/337/1935.html
 - GitHub: https://github.com/ftazad
 - LinkedIn: https://linkedin.com/in/fahimtasneemaazad16
 - Email: fazad@asu.edu
