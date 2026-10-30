@@ -662,6 +662,15 @@ main {
   }
 }
 
+/* Optional smaller second line under a list item (e.g. advisor under a degree) */
+.itemlist .item-note {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-top: 0.1rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
