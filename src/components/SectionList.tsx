@@ -37,6 +37,7 @@ export default function SectionList({ id, heading, items, variant = 'bullets' }:
                     </>
                   )}
                   {item.new && <span className="badge-new">NEW</span>}
+                  {item.note && <span className="item-note">{item.note}</span>}
                 </li>
               );
             })}
