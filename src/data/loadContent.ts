@@ -4,6 +4,7 @@
 //     (Excel / Numbers / Google Sheets): add a row, save as CSV, push.
 import profile from '@/contents/profile.json';
 
+import educationCsv from '@/contents/education.csv?raw';
 import awardsCsv from '@/contents/awards.csv?raw';
 import fundingCsv from '@/contents/funding.csv?raw';
 import teachingCsv from '@/contents/teaching.csv?raw';
@@ -121,6 +122,7 @@ export const profileData = profile as Profile;
 
 // Section headings for the CSV-backed lists (edit here if you rename a section);
 // the rows themselves live in the matching contents/*.csv files.
+export const educationData = { heading: 'Education', items: csvToItems(educationCsv) };
 export const awardsData = { heading: 'Awards & Honors', items: csvToItems(awardsCsv) };
 export const fundingData = { heading: 'Research Funding and Grants', items: csvToItems(fundingCsv) };
 export const teachingData = { heading: 'Teaching and Faculty Appointments', items: csvToItems(teachingCsv) };
