@@ -1,5 +1,5 @@
-text,highlight
-"Ph.D., Computer Science, Arizona State University, Tempe, AZ, expected 2026. Advisor: Prof. K. Selçuk Candan",true
-"M.S., Computer Science, Arizona State University, Tempe, AZ, 2023 (with Distinction)",
-"M.B.A., Finance, Institute of Business Administration, University of Dhaka, Bangladesh, 2014",
-"B.IT., Software Engineering, Multimedia University, Cyberjaya, Malaysia, 2009 (with Distinction)",
+text,highlight,note
+"Ph.D., Computer Science, Arizona State University, Tempe, AZ, expected 2026",true,Advisor: Prof. K. Selçuk Candan
+"M.S., Computer Science, Arizona State University, Tempe, AZ, 2023 (with Distinction)",,
+"M.B.A., Finance, Institute of Business Administration, University of Dhaka, Bangladesh, 2014",,
+"B.IT., Software Engineering, Multimedia University, Cyberjaya, Malaysia, 2009 (with Distinction)",,
