@@ -19,6 +19,8 @@ export interface ListItem {
   highlight?: boolean;
   new?: boolean;
   url?: string;
+  /** Optional second line, shown smaller (e.g. an advisor). */
+  note?: string;
 }
 
 /**
@@ -87,6 +89,7 @@ function csvToItems(raw: string): ListItem[] {
       if (truthy(r.highlight)) item.highlight = true;
       if (truthy(r.new)) item.new = true;
       if (r.url) item.url = r.url;
+      if (r.note) item.note = r.note;
       return item;
     })
     .filter((i) => i.text.length > 0);
