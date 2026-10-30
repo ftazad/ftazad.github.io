@@ -116,6 +116,9 @@ export interface Profile {
   jobMarket: { title: string; text: string; url: string };
   stats: { label: string; value: string }[];
   bio: string[];
+  /** true = show bioNotice instead of the bio paragraphs (bio text is kept). */
+  bioUnderConstruction?: boolean;
+  bioNotice?: string;
   futureLab: { eyebrow: string; heading: string; text: string; ctaLabel: string; ctaUrl: string };
   contactNote: string;
   researchNotice: string;
