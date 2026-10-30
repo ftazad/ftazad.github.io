@@ -1,16 +1,26 @@
 import { useState } from 'react';
-import { GraduationCap, FileText, Github, Linkedin, Mail, BookOpen } from 'lucide-react';
+import { GraduationCap, FileText, Github, Linkedin, Mail, BookOpen, Library, IdCard } from 'lucide-react';
 import { profileData } from '../data/loadContent';
 
 export default function Hero() {
-  const { name, credential, roles, headshot, initials, cv, email, links, jobMarket, stats } = profileData;
+  const { name, preferredName, credential, roles, headshot, initials, cv, email, links, jobMarket, stats } = profileData;
   const [photoOk, setPhotoOk] = useState(true);
   return (
     <header className="hero">
       <div className="container">
         <div className="hero-grid">
           <div className="hero-lead">
-            <h1 className="hero-name">{name}</h1>
+            <h1 className="hero-name">
+              {preferredName && name.includes(preferredName) ? (
+                <>
+                  {name.split(preferredName)[0]}
+                  <span className="preferred-name" title={`Goes by ${preferredName}`}>{preferredName}</span>
+                  {name.split(preferredName).slice(1).join(preferredName)}
+                </>
+              ) : (
+                name
+              )}
+            </h1>
             <hr className="hero-rule" />
 
             <div className="roles">
@@ -41,10 +51,14 @@ export default function Hero() {
                 </a>
               )}
               {links.dblp && (
-                <a className="chip" href={links.dblp} target="_blank" rel="noopener noreferrer">DBLP</a>
+                <a className="chip" href={links.dblp} target="_blank" rel="noopener noreferrer">
+                  <Library size={16} /> DBLP
+                </a>
               )}
               {links.orcid && (
-                <a className="chip" href={links.orcid} target="_blank" rel="noopener noreferrer">ORCID</a>
+                <a className="chip" href={links.orcid} target="_blank" rel="noopener noreferrer">
+                  <IdCard size={16} /> ORCID
+                </a>
               )}
               <a className="chip" href={links.github} target="_blank" rel="noopener noreferrer">
                 <Github size={16} /> GitHub
