@@ -9,7 +9,7 @@
     },
     {
       "role": "Graduate Research Assistant",
-      "org": "EMIT Lab, Arizona State University (Advisor: Prof. K. Selçuk Candan)",
+      "org": "EMIT Lab, Arizona State University",
       "url": ""
     },
     {
@@ -60,6 +60,8 @@
     "Before her Ph.D., Azad spent more than five years as a university faculty member in Bangladesh, most recently as an Assistant Professor at United International University, where she secured a university research grant as principal investigator and led the faculty team preparing ACBSP accreditation. She holds an M.S. in Computer Science from Arizona State University, an M.B.A. in Finance from the Institute of Business Administration, University of Dhaka, and a B.IT. in Software Engineering from Multimedia University, Malaysia.",
     "Azad is committed to building community in computing. As President of Upsilon Pi Epsilon at ASU, she organized a SCAI-wide mentorship program open to about 450 Ph.D. students, and as VP External Affairs of Women in Computer Science she ran a programming competition and led Grace Hopper Celebration trip selection. She has received ASU's Outstanding Mentorship Award from the Graduate Student Government (2025, 2026), the Outstanding Graduate Student Leader Award at the 2024 Pitchfork Awards, and the Fulton Schools Impact Award."
   ],
+  "bioUnderConstruction": true,
+  "bioNotice": "My bio is being updated and will be back soon. In the meantime, my CV and publications cover my background and research in detail.",
   "futureLab": {
     "eyebrow": "Future research lab",
     "heading": "Causal intelligence for complex dynamic systems",
