@@ -97,6 +97,8 @@ function csvToItems(raw: string): ListItem[] {
 
 export interface Profile {
   name: string;
+  /** Part of the name to underline in the Home page headline (the name you go by). */
+  preferredName?: string;
   credential: string;
   roles: { role: string; org: string; url: string }[];
   email: string;
