@@ -9,7 +9,7 @@ export default function Research() {
     <Shell>
       <PageHead
         title="Research"
-        intro="Causally-informed machine learning for forecasting complex dynamic systems under data sparsity and regime shift."
+        intro="Causally-informed machine learning algorithms for forecasting in dynamic complex systems under data sparsity and regime shift."
       />
       <section className="section" id="construction">
         <div className="container">
