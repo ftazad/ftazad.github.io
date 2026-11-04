@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { GraduationCap, FileText, Github, Linkedin, Mail, BookOpen, Library, IdCard } from 'lucide-react';
 import { profileData } from '../data/loadContent';
+import NetworkBackground from './NetworkBackground';
 
 export default function Hero() {
   const { name, preferredName, credential, roles, headshot, initials, cv, email, links, jobMarket, stats } = profileData;
   const [photoOk, setPhotoOk] = useState(true);
   return (
     <header className="hero">
+      <NetworkBackground />
       <div className="container">
         <div className="hero-grid">
           <div className="hero-lead">

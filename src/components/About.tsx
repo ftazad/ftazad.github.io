@@ -1,4 +1,4 @@
-import { FileText, BookOpen } from 'lucide-react';
+import { FileText, BookOpen, ArrowRight } from 'lucide-react';
 import { profileData } from '../data/loadContent';
 
 export default function About() {
@@ -18,11 +18,16 @@ export default function About() {
             </div>
           </div>
         ) : (
-          <div className="prose">
-            {bio.map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
-          </div>
+          <>
+            <div className="prose">
+              {bio.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+            <a className="demo-link" href="/research.html#demo">
+              See my research in one interactive picture <ArrowRight size={16} />
+            </a>
+          </>
         )}
       </div>
     </section>
