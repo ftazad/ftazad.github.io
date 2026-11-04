@@ -861,6 +861,32 @@ main {
   font-size: 0.95rem;
 }
 
+/* ---- Compact sizing for the demo (closer to a figure than a full panel) ---- */
+.toy {
+  max-width: 46rem;
+  padding: 0.75rem 0.85rem 0.7rem;
+  border-radius: 12px;
+}
+.toy-scen { gap: 0.35rem; margin-bottom: 0.55rem; }
+.toy-chip { font-size: 0.72rem; padding: 0.18rem 0.6rem; }
+.toy-head { margin-bottom: 0.4rem; }
+.toy-head h2 { font-size: 1rem; }
+.toy-status { font-size: 0.6rem; }
+.toy-canvas { height: 13.5rem; }
+.toy-foot { margin-top: 0.5rem; gap: 0.5rem 1rem; }
+.toy-legend { font-size: 0.72rem; gap: 0.2rem 0.8rem; }
+.toy-sw { width: 1rem; }
+.toy-actions { gap: 0.35rem; }
+.toy-actions .chip { font-size: 0.74rem; padding: 0.28rem 0.7rem; }
+.toy-meters { margin-top: 0.5rem; font-size: 0.7rem; grid-template-columns: auto 7rem auto; gap: 0.15rem 0.6rem; }
+.toy-bar { height: 6px; }
+.toy-num { font-size: 0.66rem; }
+.toy-caption { margin-top: 0.45rem; font-size: 0.78rem; line-height: 1.45; min-height: 2.6em; }
+@media (max-width: 760px) {
+  .toy-canvas { height: 12.5rem; }
+  .toy-meters { grid-template-columns: auto 1fr auto; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
