@@ -665,7 +665,7 @@ main {
 /* Optional smaller second line under a list item (e.g. advisor under a degree) */
 .itemlist .item-note {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   font-weight: 400;
   color: var(--muted);
   margin-top: 0.1rem;
