@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
 
 /**
- * A slowly drifting network of nodes drawn behind the Home page header.
- * Nearby nodes are linked; a few links are directed (purple arrows), a nod to
- * causal graphs. Nodes drift gently away from the mouse.
+ * A quiet, slowly drifting network of nodes drawn behind the Home page header.
+ * Nearby nodes are linked; a few links are directed (purple arrows), a light nod
+ * to causal graphs. Deliberately faint and slow so it reads as texture.
  * Pauses when off screen or in a background tab; static if reduced motion is on.
  */
 interface Node {
@@ -15,7 +15,7 @@ interface Node {
   directed: boolean;
 }
 
-const LINK = 120;
+const LINK = 110;
 
 export default function NetworkBackground() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -31,7 +31,6 @@ export default function NetworkBackground() {
     let h = 0;
     let raf = 0;
     let visible = true;
-    const mouse = { x: -9999, y: -9999 };
 
     const css = (n: string) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 
@@ -47,14 +46,14 @@ export default function NetworkBackground() {
 
     function init() {
       fit();
-      const count = Math.round(Math.min(70, Math.max(26, (w * h) / 9000)));
+      const count = Math.round(Math.min(40, Math.max(14, (w * h) / 16000)));
       nodes = Array.from({ length: count }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.25,
-        vy: (Math.random() - 0.5) * 0.25,
-        r: 1.4 + Math.random() * 1.4,
-        directed: Math.random() < 0.18,
+        vx: (Math.random() - 0.5) * 0.12,
+        vy: (Math.random() - 0.5) * 0.12,
+        r: 1.1 + Math.random() * 1.1,
+        directed: Math.random() < 0.15,
       }));
     }
 
@@ -64,16 +63,6 @@ export default function NetworkBackground() {
       const muted = css('--muted');
       for (const n of nodes) {
         if (!reduce) {
-          const mx = n.x - mouse.x;
-          const my = n.y - mouse.y;
-          const m2 = mx * mx + my * my;
-          if (m2 < 9000) {
-            const f = 0.6 / Math.sqrt(m2 + 1);
-            n.vx += mx * f * 0.02;
-            n.vy += my * f * 0.02;
-          }
-          n.vx *= 0.995;
-          n.vy *= 0.995;
           n.x += n.vx;
           n.y += n.vy;
           if (n.x < 0 || n.x > w) n.vx *= -1;
@@ -91,8 +80,8 @@ export default function NetworkBackground() {
           const fade = 1 - d / LINK;
           const directed = p.directed && !q.directed;
           ctx!.strokeStyle = directed ? acc : muted;
-          ctx!.globalAlpha = fade * (directed ? 0.55 : 0.22);
-          ctx!.lineWidth = directed ? 1.2 : 0.8;
+          ctx!.globalAlpha = fade * (directed ? 0.32 : 0.12);
+          ctx!.lineWidth = directed ? 1 : 0.7;
           ctx!.beginPath();
           ctx!.moveTo(p.x, p.y);
           ctx!.lineTo(q.x, q.y);
@@ -103,7 +92,7 @@ export default function NetworkBackground() {
             const hx = q.x - ux * 6;
             const hy = q.y - uy * 6;
             ctx!.fillStyle = acc;
-            ctx!.globalAlpha = fade * 0.7;
+            ctx!.globalAlpha = fade * 0.4;
             ctx!.beginPath();
             ctx!.moveTo(hx, hy);
             ctx!.lineTo(hx - ux * 5 - uy * 3, hy - uy * 5 + ux * 3);
@@ -114,7 +103,7 @@ export default function NetworkBackground() {
         }
       }
       for (const n of nodes) {
-        ctx!.globalAlpha = n.directed ? 0.85 : 0.45;
+        ctx!.globalAlpha = n.directed ? 0.5 : 0.25;
         ctx!.fillStyle = n.directed ? acc : muted;
         ctx!.beginPath();
         ctx!.arc(n.x, n.y, n.r, 0, Math.PI * 2);
@@ -141,25 +130,10 @@ export default function NetworkBackground() {
       draw();
     };
     window.addEventListener('resize', onResize);
-    // The canvas ignores the pointer so links stay clickable; listen on the header instead.
-    const host = canvas.parentElement;
-    const onMove = (e: PointerEvent) => {
-      const r = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - r.left;
-      mouse.y = e.clientY - r.top;
-    };
-    const onLeave = () => {
-      mouse.x = -9999;
-      mouse.y = -9999;
-    };
-    host?.addEventListener('pointermove', onMove);
-    host?.addEventListener('pointerleave', onLeave);
     return () => {
       cancelAnimationFrame(raf);
       io.disconnect();
       window.removeEventListener('resize', onResize);
-      host?.removeEventListener('pointermove', onMove);
-      host?.removeEventListener('pointerleave', onLeave);
     };
   }, []);
 
