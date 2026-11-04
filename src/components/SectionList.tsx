@@ -40,7 +40,7 @@ export default function SectionList({ id, heading, items, variant = 'bullets' }:
                   {item.note && (
                     <span className="item-note">
                       {item.noteUrl ? (
-                        <a href={item.noteUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-2)' }}>
+                        <a href={item.noteUrl} target="_blank" rel="noopener noreferrer">
                           {item.note}
                         </a>
                       ) : (
