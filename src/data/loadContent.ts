@@ -21,6 +21,8 @@ export interface ListItem {
   url?: string;
   /** Optional second line, shown smaller (e.g. an advisor). */
   note?: string;
+  /** Optional link for the note line. */
+  noteUrl?: string;
 }
 
 /**
@@ -90,6 +92,7 @@ function csvToItems(raw: string): ListItem[] {
       if (truthy(r.new)) item.new = true;
       if (r.url) item.url = r.url;
       if (r.note) item.note = r.note;
+      if (r.note_url) item.noteUrl = r.note_url;
       return item;
     })
     .filter((i) => i.text.length > 0);
