@@ -887,6 +887,15 @@ main {
   .toy-meters { grid-template-columns: auto 1fr auto; }
 }
 
+/* Smaller photo column on the Home page */
+.hero-grid {
+  grid-template-columns: minmax(0, 1fr) 12rem;
+}
+@media (max-width: 760px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-cards { max-width: 12rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
