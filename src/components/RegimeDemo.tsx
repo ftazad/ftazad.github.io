@@ -239,7 +239,7 @@ export default function RegimeDemo() {
       const ink = css('--ink'), muted = css('--muted'), acc = css('--accent'), acc2 = css('--accent-2');
       const lane = css('--border');
       const narrow = w < 520;
-      const L = narrow ? 70 : 132, R = 10, gap = 12;
+      const L = narrow ? 64 : 112, R = 8, gap = 8;
       const rowH = [(h - 2 * gap) * 0.27, (h - 2 * gap) * 0.27, (h - 2 * gap) * 0.46];
       const rows: { top: number; h: number }[] = [];
       let y0 = 0;
@@ -268,7 +268,7 @@ export default function RegimeDemo() {
           g.stroke();
           g.restore();
           g.fillStyle = acc2;
-          g.font = '11px "JetBrains Mono", monospace';
+          g.font = '9.5px "JetBrains Mono", monospace';
           g.textAlign = 'left';
           g.textBaseline = 'alphabetic';
           g.fillText('REGIME SHIFT', Math.min(sx + 6, w - 90), 11);
@@ -282,13 +282,13 @@ export default function RegimeDemo() {
         g.fillRect(L, row.top, w - L - R, row.h);
         g.restore();
         g.fillStyle = color;
-        g.font = `500 ${narrow ? 11 : 13}px Inter, sans-serif`;
+        g.font = `500 ${narrow ? 10 : 11.5}px Inter, sans-serif`;
         g.textAlign = 'left';
         g.textBaseline = 'middle';
         const words = label.split(' ');
         if (narrow && words.length > 1) {
-          g.fillText(words[0], 0, row.top + row.h / 2 - 7);
-          g.fillText(words.slice(1).join(' '), 0, row.top + row.h / 2 + 7);
+          g.fillText(words[0], 0, row.top + row.h / 2 - 6);
+          g.fillText(words.slice(1).join(' '), 0, row.top + row.h / 2 + 6);
         } else g.fillText(label, 0, row.top + row.h / 2);
       };
       const series = (
@@ -325,21 +325,21 @@ export default function RegimeDemo() {
       drawLane(rows[0], sc.x, muted);
       drawLane(rows[1], sc.z, muted);
       drawLane(rows[2], sc.y, ink);
-      series(rows[0], X, muted, 1.6);
-      series(rows[1], Z, shifted ? acc2 : muted, 1.6);
+      series(rows[0], X, muted, 1.3);
+      series(rows[1], Z, shifted ? acc2 : muted, 1.3);
       const anySparse = OBS.slice(off).some((o) => !o);
-      series(rows[2], Y, ink, 2.2, undefined, anySparse ? 0.28 : 1);
+      series(rows[2], Y, ink, 1.8, undefined, anySparse ? 0.28 : 1);
       if (anySparse) {
         g.fillStyle = ink;
         for (let i = off; i < Y.length; i++) {
           if (!OBS[i]) continue;
           g.beginPath();
-          g.arc(xs(i), vy(rows[2], Y[i]), 3.2, 0, Math.PI * 2);
+          g.arc(xs(i), vy(rows[2], Y[i]), 2.6, 0, Math.PI * 2);
           g.fill();
         }
       }
-      series(rows[2], PR, acc2, 2, [6, 5]);
-      series(rows[2], PC, acc, 2);
+      series(rows[2], PR, acc2, 1.7, [5, 4]);
+      series(rows[2], PC, acc, 1.7);
 
       const i1 = X.length - 1, i0 = i1 - LAG;
       const ax = xs(i0), ay = rows[0].top + rows[0].h * 0.5, bx = xs(i1), by = rows[2].top + rows[2].h * 0.18;
