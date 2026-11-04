@@ -25,7 +25,7 @@ export default function About() {
               ))}
             </div>
             <a className="demo-link" href="/research.html#demo">
-              See my research in one interactive picture <ArrowRight size={16} />
+              See my research in a nutshell <ArrowRight size={16} />
             </a>
           </>
         )}
