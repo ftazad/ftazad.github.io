@@ -1,6 +1,7 @@
 import { FileText, GraduationCap, BookOpen } from 'lucide-react';
 import Shell from '../shell';
 import PageHead from '../components/PageHead';
+import RegimeDemo from '../components/RegimeDemo';
 import { profileData } from '../data/loadContent';
 
 export default function Research() {
@@ -11,6 +12,7 @@ export default function Research() {
         title="Research"
         intro="Causally-informed machine learning algorithms for forecasting in dynamic complex systems under data sparsity and regime shift."
       />
+      <RegimeDemo />
       <section className="section" id="construction">
         <div className="container">
           <div className="labcard">
