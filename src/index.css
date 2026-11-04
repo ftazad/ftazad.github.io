@@ -671,6 +671,15 @@ main {
   margin-top: 0.1rem;
 }
 
+/* Links in the small note line (e.g. advisor) use the orange of the highlighted degree */
+.itemlist .item-note a {
+  color: var(--accent-2);
+}
+.itemlist .item-note a:hover {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
 /* The name you go by, underlined in the accent colour inside the headline */
 .preferred-name {
   text-decoration: underline;
