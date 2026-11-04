@@ -671,9 +671,9 @@ main {
   margin-top: 0.1rem;
 }
 
-/* Links in the small note line (e.g. advisor) use the orange of the highlighted degree */
+/* Links in the small note line (e.g. advisor): grey, turning to the degree's orange on hover */
 .itemlist .item-note a {
-  color: var(--accent-2);
+  color: var(--muted);
 }
 .itemlist .item-note a:hover {
   color: var(--accent-2);
